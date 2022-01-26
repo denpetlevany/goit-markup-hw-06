@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
-</head>
+ </head>
     <body>
         <header class="header-studio">
             <div class="container header-container">
@@ -61,7 +61,7 @@
                 <li class="features-list-item">
                     <div class="features-list-icon-container">
                         <svg class="features-list-icon">
-                            <use href="./images/icons.svg#icon-antenna"width="70" height="70"></use>
+                            <use href="./images/icons.svg#icon-antenna" width="70" height="70"></use>
                         </svg>
                     </div>
                     <h3 class="features-header">Внимание к деталям</h3>
@@ -379,6 +379,22 @@
                 </li>
                 </ul>
             </div>
+            <div class="subscribe">
+                <h3 class="subscribe-title">Подпишитесь на рассылку</h3>
+                <div class="subscribe-form">
+                    <label class="subscribe-form-field">
+                        <input class="email-form-footer" type="email" name="email" title="mailname@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" required>
+                    </label>
+                    <button type="submit" class="subscribe-form-btn">
+                    Подписаться
+                    <span class="subscribe-btn-icon">
+                        <svg class="subscribe-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </span>
+                </button>
+                </div>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal >
@@ -388,6 +404,51 @@
                     <use href="images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+            <form class="modal-form">
+                <p class="modal-form-header">Оставьте свои данные мы вам перезвоним</p>
+                <label class="modal-field">
+                    Имя
+                    <span class="modal-wrapper">
+                        <input type="text" class="modal-input" name="user-name" minlength="3" maxlength="18" pattern="[az-A-Zа-яёА-ЯЁ]+" placeholder="Name" title="Имя может содержать только кириллические или латинские символы" required>
+                        <svg class="name-form-icon modal-icon" width="12" height="12">
+                            <use href="./images/icons.svg#icon-name"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-field">
+                    Телефон
+                    <span class="modal-wrapper">
+                        <input type="tel" class="modal-input" name="tel" pattern="[\+]\d{3}[\(]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+                            placeholder="+380(99)999-99-99" title="+380(99)999-99-99" required>
+                        <svg class="tel-form-icon modal-icon" width="13" height="13">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-field">
+                    Почта
+                    <span class="modal-wrapper">
+                        <input class="modal-input" type="email" name="email" title="mailname@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" required>
+                        <svg class="email-form-icon modal-icon" width="15" height="12">
+                            <use href="./images/icons.svg#icon-mail"></use>
+                        </svg>
+                    </span>
+                </label>
+                <label class="modal-field comment">
+                    Комментарий
+                    <textarea class="modal-message" name="user-message" placeholder="Введите текст" title="Комментарий должен содержать не более 360 символов" maxlength="360" ></textarea>
+                </label>
+                <input type="checkbox" id="policy" class="modal-policy-checkbox hide">
+                <label for="policy" class="policy-checkbox-label">
+                    Соглашаюсь с рассылкой и принимаю&nbsp
+                    <a class="policy-link" href="">
+                        Условия договора
+                    </a>
+                </label>
+                <div class="modal-button-block">
+                <button type="submit" class="modal-btn-submit">Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
