@@ -920,6 +920,7 @@ address {
   background-color: var(--accent-color);
   background-repeat: no-repeat;
   background-position: center;
+  border-color: var(--accent-color);
 }
 
 .policy-link {
